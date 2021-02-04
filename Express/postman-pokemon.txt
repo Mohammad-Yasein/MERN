@@ -1,0 +1,5 @@
+// 1. request: https://pokeapi.co/api/v2/pokemon/1
+// 2. request: https://pokeapi.co/api/v2/pokemon/ditto
+// 3. request: https://pokeapi.co/api/v2/ability/4
+// 4. request: https://pokeapi.co/api/v2/type/3
+// 5. request: https://pokeapi.co/api/v2/pokemon?limit=100&offset=200
