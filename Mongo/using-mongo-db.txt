@@ -1,0 +1,39 @@
+> use my_first_db
+
+> db.createCollection('students')
+
+> db.students.insert({name: 'Ali', home_state: 'Ramallah', lucky_number: 10, birthday: {month: 7, day: 10, year: 1991}})
+
+> db.students.find().pretty()
+
+> db.students.find({home_state: 'Ramallah'})
+
+> db.students.find({lucky_number: {$gt: 3}})
+
+> db.students.find({lucky_number: {$lte: 10}})
+
+> db.students.find({lucky_number: {$gte: 1, $lte: 9}})
+
+> db.students.updateMany({}, {$set: {interests: ['coding', 'brunch', 'MongoDB']}})
+
+> db.students.update({_id: ObjectId("601e4c19d9ceb4d800a6165f")}, {$addToSet: {interests: 'Python'}})
+
+> db.students.update({_id: ObjectId("601e4c19d9ceb4d800a6165f")}, {$push: {interests: 'taxes'}})
+
+> db.students.update({_id: ObjectId("601e4c19d9ceb4d800a6165f")}, {$pull: {interests: 'taxes'}})
+
+> db.students.remove({home_state: "Ramallah"})
+
+> db.students.remove({name: "Ali"})
+
+> db.students.remove({lucky_number: {$gt: 5}}, true)
+
+> db.students.updateMany({}, {$set: {number_of_belts: 0}})
+
+> db.students.updateMany({home_state: 'Ramallah'}, {$inc: {number_of_belts: 1}})
+
+> db.students.updateMany({}, {$rename: {number_of_belts: 'belts_earned'}})
+
+> db.students.updateMany({}, {$unset: {lucky_number: ""}})
+
+> db.students.updateMany({}, {$currentDate: {updated_on: true}})
