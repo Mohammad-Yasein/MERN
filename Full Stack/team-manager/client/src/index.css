@@ -1,0 +1,15 @@
+/* Background Color: */
+
+.bg-light-gray {
+  background-color: #ddd;
+}
+
+/* Classes: */
+
+.main-nav {
+  font-size: 1.5rem;
+}
+
+.sub-nav {
+  font-size: 1.2rem;
+}
